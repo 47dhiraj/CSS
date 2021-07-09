@@ -1,0 +1,104 @@
+/* Styling Only for Visualization */
+.parent {
+  padding: 5px;
+  background-color: #00AAFF;
+}
+
+.child {
+  padding: 5px;
+}
+
+.child-one {
+  background-color: rgb(116, 255, 116);
+}
+
+.child-two {
+  background-color: rgb(248, 117, 117);
+}
+
+.child-three {
+  background-color: rgb(255, 116, 232);
+}
+
+
+/* Styling for Positioning elements */
+
+.parent {
+    /* yedi absolute child element haru lai parent element ko top ko basis batw movement dinu cha vani parent element ko positioning relative garna parcha */
+    position: relative;          /* yedi parent element vitra ko absolute element haru, parent element kai basis ma absolute position ma basos rather than screen ko top ko basis ma absolute position basos, vanne chahanu huncha vani ,,, sabai vanda pahila parent element ko positioning kei na kei garauna parcha except static*/
+    /* position: absolute;   */
+
+    height: 250vh;              /* screen lai scrollable garauna ko lagi yo parent element lai 250 viewport height deko*/
+}
+
+.child-one {
+
+    /* 1) Relative Positions : aafno ahile ko current position(static positioin) ko basis batw move garne garcha  & yo relative element vitra jatro size ko element vaye pani purai left to right screen occupy garne garcha*/
+        /* position: relative; */
+        /* yedi element ko positioning relative cha vani, we can use top ,left ,bottom & right but yesle element lai yeta uta matra lani kaam garcha,, ani yedi element overflow banai rako huncha tes karan top, left, bottom & right property khasai use garidaina */
+        /* top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px; */
+
+    /* 2) Absolute Positions : kunai element lai ek thau ma stick garai rakhnu paryo vani yo use garincha...yo absolute element vitra jatro size ko content cha teti size matra occupy garne garcha  ,,,, yedi absolute element ko effect ramro sanga herna cha vani, suru ma yo absolute element ko parent element ko kei na kei positioning vako huna parcha except static positioining */
+        /* position: absolute; */
+        /* yedi kunai element lai kunai thau ma stick (chipkayera) jastai rakhna cha vani position absolute ko use garincha */
+        /* top, left, bottom & right use garyo vani yo chipkeko absolute element tankine kaam huncha ,, yo asbolute element nai move garne kaam chai gardaina.. kinaki tyo ek thau ma chipki sakyo, aba chipkeko kura tankauna matra sakincha */
+        /* top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px; */
+
+    /* 3) Fixed Positions : same absolute jastai ek thau ma sticky huncha & screen ko top ko basis batw tankine kaam garcha & assolute vanda arko difference vaneko paranet element ko positioning j sukai hos baal matlab hudaina... & fixed & asbolute element ko difference vaneko absolute element scroll garda scrollable huncha but fixed element scroll garda scrollable hudaina */
+        position: fixed;
+        
+
+}
+
+.child-two {
+
+    /* 1) Relative Positions*/
+        /* position: relative; */
+        /* yedi element ko positioning relative cha vani, we can use top ,left ,bottom & right but yesle element lai yeta uta matra lani kaam garcha,, ani yedi element overflow banai rako huncha tes karan top, left, bottom & right property khasai use garidaina */
+        /* top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px; */
+
+    
+    /* 2) Absolute Positions : kunai element lai ek thau ma stick garai rakhnu paryo vani yo use garincha...yo absolute element vitra jatro size ko content cha teti size matra occupy garne garcha  ,,,, yedi absolute element ko effect ramro sanga herna cha vani, suru ma yo absolute element ko parent element ko kei na kei positioning vako huna parcha except static positioining */
+        /* position: absolute; */
+        /* yedi kunai element lai kunai thau ma stick (chipkayera) jastai rakhna cha vani position absolute ko use garincha */
+        /* top, left, bottom & right use garyo vani yo chipkeko absolute element tankine kaam huncha ,, yo asbolute element nai move garne kaam chai gardaina.. kinaki tyo ek thau ma chipki sakyo, aba chipkeko kura tankauna matra sakincha */
+        /* top: 20px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px; */
+
+
+}
+
+.child-three {
+
+    /* 1) Relative Positions*/
+        /* position: relative; */
+        /* yedi element ko positioning relative cha vani, we can use top ,left ,bottom & right but yesle element lai yeta uta matra lani kaam garcha,, ani yedi element overflow banai rako huncha tes karan top, left, bottom & right property khasai use garidaina */
+        /* top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px; */
+
+    /* 2) Absolute Positions : kunai element lai ek thau ma stick garai rakhnu paryo vani yo use garincha...yo absolute element vitra jatro size ko content cha teti size matra occupy garne garcha  ,,,, yedi absolute element ko effect ramro sanga herna cha vani, suru ma yo absolute element ko parent element ko kei na kei positioning vako huna parcha except static positioining */
+            /* position: absolute; */
+            /* yedi kunai element lai kunai thau ma stick (chipkayera) jastai rakhna cha vani position absolute ko use garincha */
+            /* top, left, bottom & right use garyo vani yo chipkeko absolute element tankine kaam huncha ,, yo asbolute element nai move garne kaam chai gardaina.. kinaki tyo ek thau ma chipki sakyo, aba chipkeko kura tankauna matra sakincha */
+            /* top: 30px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px; */
+
+}
+
+
+

@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+    display: grid;              /* yo display: grid le chai main lai grid banaune kaam garcha.. yo styling chai lekhnai parcha yedi kunai div tag lai grid stylling dine ho vani*/
+
+    height: 100vh;                            /* Yesari vh format ma height diyo vani pani responsive huncha.. but pixtel ma height diyo vani responsive nahuna pani sakcha..... yo height chai main grid container ko height or total height of grid container */
+
+    grid-template-columns: 1fr 1fr;             /* yesto fraction (i.e fr) property use garyo vani chai responsive huncha but pixel (i.e px) use garyo vani responsvie hudaina..... jati ota fr (i.e fraction) cha teti ota column create huncha & column ko width chai sabai column milera screen cover gari rako huncha in responsive way */
+
+    grid-template-rows: 1fr 1fr 1fr;                /* jati ota fr cha teti ota rows create huncha ..... single row ko height chai hamro main ko height(i.e total main grid container ko height) kati cha divide by no. of row fraction huncha..*/
+
+
+
+    grid-template-areas: 
+        "box1 box1"             /*yo row ma 2 ta column i.e box1 huncha 1st column ma & box2 huncha 2nd column ma*/
+        "box2 ."                /*yo row ma 2 ta column i.e box2 huncha 1st column ma & . vannale blank huncha 2nd column ma*/
+        ". box3";               /*yo row ma 2 ta column i.e blank huncha 1st column ma & box3 huncha 2nd column ma*/
+
+    
+
+}
+
+
+.box1 {
+    background: lightcoral;
+
+    grid-area: box1;            /* yo line ko code le box1 ko styling & grid-template-areas ko box1 area lai link garaune kaam gareko cha.. */
+
+}
+
+.box2 {
+    background: lightblue;
+
+    grid-area: box2;            /* yo line ko code le box2 ko styling & grid-template-areas ko box2 area lai link garaune kaam gareko cha.. */
+
+} 
+
+.box3 {
+    background: lightgreen;
+
+    grid-area: box3;            /* yo line ko code le box3 ko styling & grid-template-areas ko box3 area lai link garaune kaam gareko cha.. */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

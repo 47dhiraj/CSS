@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.gallery {
+    display: grid;          /* gallery vanni div element vitra ko styling grid styling dina ko lagi display: grid gareko*/
+
+    /*grid-template-columns: repeat(auto-fill, 300px);    */        /* auto-fill  use gare pachi responsive tarika le auta row ma column display vai rako huncha ( i.e kunai bela kati kunai bela kati)... Note: yedi auta row ma kati columns lyaune tmlai khasai tha vayena ani responsive pani garauna parni cha .. testo case ma css grid le nai auta row ma kati column halne vanera decision line garauna ko lagi auto-fill property use gareko*/
+
+    /*grid-template-columns: repeat(auto-fill, 300px);  */    /* auto-fill le pani responsive garcha.. automatic fill garauna ko lagi grid element create gardaina auto fill le create gare jasto*/
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+
+    
+}
+
+.gallery img {
+    width: 100%;                /* grid ko size jati sano vaye ni.. image ko width chai 100% nai rahanu paryo vaneko (i.e grid ko sano size vayo vani.. image ni tei sano size ma 100% tarikale display huna paryo)*/
+}

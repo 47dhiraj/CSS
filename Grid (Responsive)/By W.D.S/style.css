@@ -1,0 +1,158 @@
+
+.grid-container {
+    display: grid;              /* By Default display:grid; lekhni bittai khasai change aaudaina*/
+    
+    /*grid-template-columns: 200px 100px;   */         /*auta column 200px ko banaune arko column 100px ko vaneko*/
+    
+    /* Note : Yedi columns haru lai % diyera size deko cha vani... columns haru responsive huncha.. yedi px diyera size gareko cha vani column haru responsive hudaina */
+    grid-template-columns: 30% 70%;
+    /* grid-template-columns: 15% 35%; */
+
+    /*grid-template-columns: 2fr 1fr 1fr;       */      /* grid-template-columns property le column wise fragment banauna help garcha...  jati ota fragment i.e fr cha teti ota fragment bani rako huncha*/  /* yo line ma 1fr ko size chai column ko vitra ko element le kati size lincha tei size nai 1fr huncha*/
+
+    /* grid-template-columns: repeat(5, 200px);     */          /* yo line le 5 ota 200px column wise grid generate garcha autai row ma.. ani remaining 5 grid  lagi chai feri 200px each column wise chuttaucha but yespali arko row ma generate garcha .. i.e 5 ota 200px ko grid bani sake pachi auta row ma.. aba arko row ma grid generate garne kaam garcha*/
+
+    /* grid-template-columns: repeat(1, 200px);     */      /* harek 1 200px ko grid generate gare pachi arko row ma grid banaucha */
+
+
+    /*grid-template-rows: 2fr 1fr 2fr 1fr 2fr;     */     /* Yesari row wise fragment pani garna sakincha i.e auta fragment le purai auta row cover garauna sakincha*/
+
+
+    /* grid-template-columns: repeat(4, 100px);  */
+    /* grid-template-rows: 200px 150px;       */          /* first row chai 200px ko huncha second row chai 150px ko huncha */
+
+    /* Suppose yedi no. or rows chai dynamically genreate hune khalko cha re.. aba tmlai tha hudaina kati ota rows huncha,, so kun row lai kati px ani kun row lai kati px .. so tesko lagi yo talako logic use garincha */
+    /* Khas ma cha grid-template-rows vanni property 1st row ko lagi matra use garincha... yedi dynamic dherai row generate hune cas ho vani chai .. yo talako kura */
+    /* grid-template-columns: repeat(4, 200px); */
+
+    /* grid-auto-columns: 800px;        */        /* yesle chai harek colum width size 800px garcha.. ani harek column lai next line lai generate garcha*/
+    
+    /* grid-template-rows: 200px;         */      /* suruko row lai matra 200px garcha*/
+    /* grid-auto-rows: 150px;         */                /* yesle chai dynamic generate hune sabi 2nd row dekhi reamaining row ko height 150px garaucha  */
+
+
+    
+
+    /* Yedi minimun ma row ko height yeti vaus and maximum ma row ko height auto garauna man cha vani yo talako minmax() use garincha */
+    grid-auto-rows: minmax(150px, auto);  
+
+    /* Yedi rows haru ko bich ma gaping chaiyeko cha vani grid-row-gaps css property ko use garna sakincha */
+    /* grid-row-gap: 25px; */
+
+    /* Yedi column haru ko bich ma gaping chaiyeko cha vani grid-column-gap css property ko use garna sakincha */
+    /* grid-column-gap: 25px; */
+
+    /* yedi grid items haru bich i.e( both row wise & column wise) nai spacing chaiyeko cha vani... we can use grid-gap css properrty */
+    grid-gap: 10px;
+
+    /* Yedi grid items haru ko row ma different gap and column ma different gap chaiyeko cha vani */
+    /* grid-gap: 25px 10px;  */    /* yesle grid har ko row ma 25px gap create garcha and grid haru ko column ma 10 px generate garcha*/
+
+
+
+
+    /*  yesle sajilari simple tarika batw automatic responsive grid haru banos vanera chahanu huncha vani.. hami inbuilt header, sidebar, content, footer jasto property use garna sakchau*/
+    /* grid-template-areas: */
+      /*"header header"    */     /* yo header naming dinu ko karan vaneko, we want our header to take row*/
+      /*"sidebar content" */    /* jati choti sidebar content lekhyo teko no. of rows lai capture garcha sidebar & content le*/
+      /*"sidebar content"   */
+      /* "sidebar content"     */
+      /*"footer footer" */
+    /* grid-template-columns: 30% 70%;
+    grid-auto-rows: minmax(150px, auto);   */
+      
+
+
+  /* Ydi Grid Container lai nai center ma dekhauna cha vani justify-content css property ko use garincha */
+  justify-content: center;
+
+  /*justify-content: start; */   /* yedi grid container lai left or start ma dekhauna cha vani*/
+
+  /*justify-content: end; */  /* yedi grid container lai right or end ma dekhauna cha vani*/
+
+
+
+
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+
+
+
+
+  align-content: center;    /* yedi grid cotainer ko content lai vertically center ma garne ho vani*/
+  height: 100vh;          /* yedi vertically mathi top batw kei space chodera grid container lai display garauna cha vani*/
+
+  }
+  
+
+  .grid-item-1 {
+    /* Easy inbuit way */
+    /* grid-area: header; */
+
+    /* One Way */
+    /* grid-column-start: 1; */
+    /*grid-column-end: -1;     */   /* grid-column-end: -1; garnu rw  grid-column-end: 3; garne ahile ko case ma same ho kina vani ahile ko case ma hami sanga 2 ta column cha i.e due to grid 2 & grid 3 so.. grid 1 lai lastai samma tanakauna ko lagi jati ota column cha tesko +1 i.e 3 lekheko ... and yedi yesari garna man chaina vani automatic aafai tha paye ramro jaha samma column cha tei samma tankiyos grid 1 vanne chahanuhuncha vani grid-column-end: -1; garincha*/
+    
+    /* Another Way */
+    /* yedi start & end lai auta line ma lekhna man cha vani  Syntax=>  start / end  */
+    /* grid-column: 1 / -1; */
+
+    /* Again Another way */
+    /* Yedi yo mathi ko 2 ta logic vanda arko logic spanning or tanukana ko lagi chaiyeko cha vani , yo talako jasari pani garna sakincha */
+    grid-column: span 2;      /* grid-column ma span 2 vaneko yesle 2 ta column samma tankaucha vaneko */
+    
+
+    /* align-self: center;
+    align-content: center; */
+  }
+
+
+  .grid-item-2 {
+    /* Easy inbuit way */
+    /* grid-area: sidebar; */
+
+
+    /* One Way */
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+
+    /* Another way */
+    grid-row: span 3;     /* grid-row ma span 3 vaneko yesle 3 ta row samma tankaucha vaneko */
+    
+
+  }
+
+
+  .grid-item-3 {
+    /* Easy inbuit way */
+    /* grid-area: content; */
+
+
+    /* One Way */
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+
+    /* Another way */
+    grid-row: span 3;     /* grid-row ma span 3 vaneko yesle 3 ta row samma tankaucha vaneko */
+    /* grid-row: span 3; */
+
+  }
+
+  .grid-item-4 {
+    /* Easy inbuit way */
+    /* grid-area: footer; */
+
+    /* One Way */
+    /* grid-column-start: 1; */
+    /*grid-column-end: -1;     */
+
+    /* Another Way*/
+    /* grid-column: 1 / -1; */
+
+    /* Again Another Way */
+    grid-column: span 2;
+
+
+  }
+  
+  

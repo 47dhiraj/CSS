@@ -1,0 +1,107 @@
+/*  Flexbox ma Main Axis & Cross Asix huncha, yedi flex-direction: row cha vani chai Main axis horizontally huncha & Cross axis vertically huncha.. but yedi flex direction column cha vani Main axis vertically huncha & cross axis horizontally huncha */
+
+.flexbox-container              /* Note: yedi flex box lai flex child element(i.e flex items) ko basis ma responsive garune ho vani chai .. flexbox ma height width dinu hudaina.. navaye flexbox(parent flexbox) chai aafno height width ma basi rako huncha.. child element ko jatro height width vayeni baal hudaina */
+{
+    background-color: tomato;
+    display: flex;                      /*   display:flex; vanni styling le flexbox container vitra vayekok sabbai flexbox items haru lai responsive garaune kaam garcha   yo display:flex; vanni styling le by default flex direction row ma display gari rako hucha */
+    /* flex-direction: row;                 by default flex direction row wise huncha    */
+    /* flex-direction: column;                flex direction colum vaneko flexbox container vitra vayeko items haru chai column wise display garaune vaneko */
+
+    /* Note Justify-content style le chai Main Axis ko basis ma flex items lai justify garne kaam garcha */
+    /* justify-content: center;     */           /* flexbox vitra vayeko sabbai flexbox item(i.e flexbox child elements haru lai) center ma lyaune kaam garcha*/
+    /*justify-content: space-around;     */     /* Sabbi flex child elements haru ko charrai tira ali ali space create garne kaam garcha*/
+
+
+    /*justify-content: space-between;     */    /* yedi flexbox items (flex box ko child elements) haru ko between ma spacing or some gap create garna cha vani justify-content: space-between; wala  styling garincha */
+
+
+    /* yo talako align-items: ; property le Flex ko Cross Axis ko basis ma kaam garcha*/
+    /* Note : align-items vanni styling le Cross Axis ko basis ma styling garney kaam garcha */
+    /* align-items: stretch; */             /* Default Styling of Flex ... yo property chai by default huncha, i.e flexboxt items lai flex ko cross axis jati nai strech huncha*/
+   
+    /* align-items: center;    */                /* flexbox vitra ko child items lai Cross Axis ko basis ma center ma align garcha*/
+
+    /* NOTE : Khyal garnu parne vaneko kahile kai yesto scenario aaucha, justify-content: center; & justify-content: space-around; styling le yo talako align-items: flex-start; & align-items: flex-end; vanni styling lai hide gardincha.. i.e justify-content property is more dominant than this align-items:  property;*/
+    /*align-items: flex-start;   */                /*  flexbox ko child items i.e flex item haru lai Cross Axis ko bais ma start ma align garcha.. i.e yedi Cross Axis vertically cha vani.. top ma huncha.. yedi cross axis horizontally cha vani left ma huncha*/
+    /*align-items: flex-end;    */            /* flexbox ko child items i.e flex item haru lai Cross Axis ko bais ma end ma align garcha.. i.e yedi Cross Axis vertically cha vani.. down ma huncha.. yedi cross axis horizontally cha vani right ma huncha */
+    
+
+    /* yo talako styling chai multi line vako flex container banauda khera use garincha.. */
+        /* height: 800px;
+        flex-wrap: wrap;
+        justify-content: center; */
+        /* align-content: space-between; */
+
+}
+
+.flexbox-item{
+    width: 400px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #9aaba1;
+}
+
+.flexbox-item-1{
+    min-height: 100px;
+
+    /*  yedi kunai flex-box lai responsive garauna chaina.. i.e mobile view ma herda pani tyo item shrink nagarauna ko lagi (i.e By Default chai flex item shrink nai huncha)*/
+    /* flex-shrink: 0; */
+
+    /* Note : flex-grow sytle & flex-basis style le sangai kaam gari rako huncha */
+    /* Yedi kunai flex item le hamro flex box ma aai rako extra item lai fill garos vanera chahanu huncha vani  */
+    flex-grow: 1;
+    /* yedi flex items haru flex-grow style ko exact proportion ma grow vaus vanera cha hanu huncha vani  flex-basis: 0; batw suru garnu parcha*/
+    flex-basis: 0;
+
+    /* Note : yedi specific flexbox item lai flexbox container ko alignment vanda beglai aligment dina paryo vani.. testo bela flexbox item lai align-self: ;  property ko use garincha */
+    /* align-self: center; */
+    align-self: flex-end;
+
+
+    /* Note : yedi particular flex item ko flebox container ma rakhda kherai ordering milayera rakhna man cha vani... particular item lai jasto ordering dina parni sakincha.. suppose default ma first position ma aauthyo vani.. last position ma lyauna ko lagi last order pani dina sakincha */
+    order: 3;
+
+}
+
+
+.flexbox-item-2{                            
+    min-height: 200px;
+    /*margin-left: auto;          */            /* yedi kunai flexbox ko items lai left sidema (i.e flex ko end ma) display garauna cha vani margin-left:auto; vanni stylilng garna parcha */
+
+
+    /* Note : flex-grow sytle & flex-basis style le sangai kaam gari rako huncha */
+    /* Yedi kunai flex item le hamro flex box ma aai rako extra item lai fill garos vanera chahanu huncha vani  */
+    flex-grow: 2;
+    /* yedi flex items haru flex-grow style ko exact proportion ma grow vaus vanera cha hanu huncha vani  flex-basis: 0; batw suru garnu parcha*/
+    flex-basis: 0;
+
+
+
+    /* Note : yedi specific flexbox item lai flexbox container ko alignment vanda beglai aligment dina paryo vani.. testo bela flexbox item lai align-self: ;  property ko use garincha */
+    /* align-self: center; */
+    align-self: flex-end;
+
+    /* Note : yedi particular flex item ko flebox container ma rakhda kherai ordering milayera rakhna man cha vani... particular item lai jasto ordering dina parni sakincha.. suppose default ma first position ma aauthyo vani.. last position ma lyauna ko lagi last order pani dina sakincha */
+    order: 2;
+
+}
+
+
+.flexbox-item-3{
+    /*margin-left: auto;     */                     /* yedi kunai flexbox ko items lai left sidema (i.e flex ko end ma) display garauna cha vani margin-left:auto; vanni stylilng garna*/
+    min-height: 300px;
+
+    /* Note : flex-grow sytle & flex-basis style le sangai kaam gari rako huncha */
+    /* Yedi kunai flex item le hamro flex box ma aai rako extra item lai fill garos vanera chahanu huncha vani  */
+    flex-grow: 1;
+    /* yedi flex items haru flex-grow style ko exact proportion ma grow vaus vanera cha hanu huncha vani  flex-basis: 0; batw suru garnu parcha*/
+    flex-basis: 0;
+
+    /* Note : yedi specific flexbox item lai flexbox container ko alignment vanda beglai aligment dina paryo vani.. testo bela flexbox item lai align-self: ;  property ko use garincha */
+    /* align-self: center; */
+    align-self: flex-end;
+
+    /* Note : yedi particular flex item ko flebox container ma rakhda kherai ordering milayera rakhna man cha vani... particular item lai jasto ordering dina parni sakincha.. suppose default ma first position ma aauthyo vani.. last position ma lyauna ko lagi last order pani dina sakincha */
+    order: 1;
+    
+}
